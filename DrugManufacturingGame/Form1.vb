@@ -25,6 +25,7 @@
     Private Sub initializeStats()
         currentCity = 0
         playerStats.Add("Money", 1000)
+        playerStats.Add("CleanMoney", 0)
     End Sub
 
     Private Sub initializeCities()
@@ -104,6 +105,7 @@
 
     Private Sub tmrScreenUpdate_Tick(sender As Object, e As EventArgs) Handles tmrScreenUpdate.Tick
         lblMoney.Text = FormatCurrency(playerStats("Money"), NumDigitsAfterDecimal:=0)
+        lblCleanMoney.Text = FormatCurrency(playerStats("CleanMoney"), NumDigitsAfterDecimal:=0)
     End Sub
 
     Private Sub tmrUIRefresh_Tick(sender As Object, e As EventArgs) Handles tmrUIRefresh.Tick

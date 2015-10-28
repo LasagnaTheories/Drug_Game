@@ -52,6 +52,8 @@ Partial Class Form1
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lblCity = New System.Windows.Forms.Label()
         Me.btnRandomizePrices = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblCleanMoney = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnAddMoney
@@ -83,7 +85,8 @@ Partial Class Form1
         'lblMoney
         '
         Me.lblMoney.AutoSize = True
-        Me.lblMoney.ForeColor = System.Drawing.Color.Khaki
+        Me.lblMoney.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMoney.ForeColor = System.Drawing.Color.IndianRed
         Me.lblMoney.Location = New System.Drawing.Point(91, 18)
         Me.lblMoney.Name = "lblMoney"
         Me.lblMoney.Size = New System.Drawing.Size(0, 13)
@@ -299,6 +302,26 @@ Partial Class Form1
         Me.btnRandomizePrices.Text = "Randomize Prices"
         Me.btnRandomizePrices.UseVisualStyleBackColor = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(17, 35)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Clean Money:"
+        '
+        'lblCleanMoney
+        '
+        Me.lblCleanMoney.AutoSize = True
+        Me.lblCleanMoney.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCleanMoney.ForeColor = System.Drawing.Color.GreenYellow
+        Me.lblCleanMoney.Location = New System.Drawing.Point(91, 35)
+        Me.lblCleanMoney.Name = "lblCleanMoney"
+        Me.lblCleanMoney.Size = New System.Drawing.Size(0, 13)
+        Me.lblCleanMoney.TabIndex = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -314,6 +337,8 @@ Partial Class Form1
         Me.Controls.Add(Me.barJob2)
         Me.Controls.Add(Me.barJob)
         Me.Controls.Add(Me.lblMoney)
+        Me.Controls.Add(Me.lblCleanMoney)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnRemoveMoney)
         Me.Controls.Add(Me.btnSellWhitePowder)
@@ -359,5 +384,7 @@ Partial Class Form1
     Friend WithEvents lblCity As System.Windows.Forms.Label
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnRandomizePrices As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblCleanMoney As System.Windows.Forms.Label
 
 End Class
