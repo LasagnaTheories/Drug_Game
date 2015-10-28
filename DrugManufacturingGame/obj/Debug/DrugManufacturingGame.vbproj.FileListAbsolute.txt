@@ -1,0 +1,10 @@
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\bin\Debug\DrugManufacturingGame.exe.config
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\bin\Debug\DrugManufacturingGame.exe
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\bin\Debug\DrugManufacturingGame.pdb
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\bin\Debug\DrugManufacturingGame.xml
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.Resources.resources
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.vbproj.GenerateResource.Cache
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.exe
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.xml
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.pdb
+C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.Form1.resources
