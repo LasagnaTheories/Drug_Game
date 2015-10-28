@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    'Test commit wtf fuck holy fucking shit niggers pls plsss
+    'Testing commit from VisualStudio2012
 
     Public playerStats, Inventory As New Dictionary(Of String, Integer)
     Public currentCity As Integer
