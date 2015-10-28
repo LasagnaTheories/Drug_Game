@@ -1,0 +1,70 @@
+===================================================================
+v Store system v (similar to shoppe keep) v
+===================================================================
+Start with:
+Level 1 - Sales Room
+Level 1 - Office
+Level 1 - Storage Room
+===================================================================
+
+
+Upgradeable Salesroom size (allows more sellers, more shelves)
+Upgradeable Storage room size (allows more stored product, has shelves too)
+Purchasable/Upgradable Vault Room
+Upgradeable Safe
+	Stored in office until max rank, can be put into a vault
+
+Upgradeable Office (speeds up money laundering)
+Upgradeable Shelves
+
+Upgradeable Cash Vault (max money)
+Upgradeable Protection (strength depends on number of rooms (e.g. 1 guard has 1/2 strength if guarding 2 rooms))
+	Security guards
+	CCTV Camera (creates countdown on attack for backup security (may not arrive in time))
+	Structural improvements
+		Barred Windows
+		Bulletproof glass
+		Metal Shutters
+
+Randomized Looting (minimum time, max time, randomized)
+Randomized Federal Raids (less frequent than lootings, harder to combat, can be bribed)
+
+===================================================================
+v Dirty Money System v
+===================================================================
+Sold product is sent to safe/vault, where it must be laundered before it can
+be spent on upgrades.
+Dirty money can be used to buy drugs.
+Laundering can be sped up by upgrading office, hiring accountants (max 3)
+
+Implement cover business system?
+
+
+===================================================================
+v Transaction log v (color coded)
+===================================================================
+Bought X weed for $XXX at CITY
+
+===================================================================
+v Average buying cost v ?
+===================================================================
+
+===================================================================
+1Weed
+White Powder
+Bath Salts
+Dried Caps
+Mind Opener
+Horse Tranq
+Black Tar
+Blue Crystal
+
+===================================================================
+v Slave Upgrades v
+===================================================================
+Slave
+Super Slave
+Chronenberg Slave
+Nanomachines
+
+===================================================================
