@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    'Testing commit from VisualStudio2012
+    'Testing commits from Visual Studio 2012
 
     Public playerStats, Inventory As New Dictionary(Of String, Integer)
     Public currentCity As Integer
