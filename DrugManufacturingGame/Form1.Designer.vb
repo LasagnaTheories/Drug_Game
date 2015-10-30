@@ -54,6 +54,12 @@ Partial Class Form1
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnAddSlot = New System.Windows.Forms.Button()
+        Me.txtAddMoney = New System.Windows.Forms.TextBox()
+        Me.lblTestHoursLeft = New System.Windows.Forms.Label()
+        Me.lblHoursLeft = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnWait1 = New System.Windows.Forms.Button()
+        Me.btnWait6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAddMoney
@@ -265,7 +271,7 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(259, 72)
+        Me.Label6.Location = New System.Drawing.Point(-190, 40)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(96, 13)
         Me.Label6.TabIndex = 1
@@ -320,12 +326,72 @@ Partial Class Form1
         Me.btnAddSlot.Text = "Add Slot"
         Me.btnAddSlot.UseVisualStyleBackColor = False
         '
+        'txtAddMoney
+        '
+        Me.txtAddMoney.Location = New System.Drawing.Point(141, 367)
+        Me.txtAddMoney.Name = "txtAddMoney"
+        Me.txtAddMoney.Size = New System.Drawing.Size(100, 20)
+        Me.txtAddMoney.TabIndex = 7
+        '
+        'lblTestHoursLeft
+        '
+        Me.lblTestHoursLeft.AutoSize = True
+        Me.lblTestHoursLeft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblTestHoursLeft.Location = New System.Drawing.Point(612, 124)
+        Me.lblTestHoursLeft.Name = "lblTestHoursLeft"
+        Me.lblTestHoursLeft.Size = New System.Drawing.Size(0, 13)
+        Me.lblTestHoursLeft.TabIndex = 1
+        '
+        'lblHoursLeft
+        '
+        Me.lblHoursLeft.AutoSize = True
+        Me.lblHoursLeft.Location = New System.Drawing.Point(12, 9)
+        Me.lblHoursLeft.Name = "lblHoursLeft"
+        Me.lblHoursLeft.Size = New System.Drawing.Size(0, 13)
+        Me.lblHoursLeft.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label8.Location = New System.Drawing.Point(255, 70)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(96, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "Double click to sell"
+        '
+        'btnWait1
+        '
+        Me.btnWait1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnWait1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnWait1.ForeColor = System.Drawing.Color.White
+        Me.btnWait1.Location = New System.Drawing.Point(585, 140)
+        Me.btnWait1.Name = "btnWait1"
+        Me.btnWait1.Size = New System.Drawing.Size(97, 23)
+        Me.btnWait1.TabIndex = 0
+        Me.btnWait1.Text = "Wait 1h"
+        Me.btnWait1.UseVisualStyleBackColor = False
+        '
+        'btnWait6
+        '
+        Me.btnWait6.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnWait6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnWait6.ForeColor = System.Drawing.Color.White
+        Me.btnWait6.Location = New System.Drawing.Point(585, 169)
+        Me.btnWait6.Name = "btnWait6"
+        Me.btnWait6.Size = New System.Drawing.Size(97, 23)
+        Me.btnWait6.TabIndex = 0
+        Me.btnWait6.Text = "Wait 6h"
+        Me.btnWait6.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MidnightBlue
         Me.ClientSize = New System.Drawing.Size(741, 521)
+        Me.Controls.Add(Me.lblHoursLeft)
+        Me.Controls.Add(Me.txtAddMoney)
         Me.Controls.Add(Me.lblCity)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
@@ -336,11 +402,15 @@ Partial Class Form1
         Me.Controls.Add(Me.lblCleanMoney)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblDay)
+        Me.Controls.Add(Me.lblTestHoursLeft)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnRemoveMoney)
+        Me.Controls.Add(Me.btnWait6)
+        Me.Controls.Add(Me.btnWait1)
         Me.Controls.Add(Me.btnAddSlot)
         Me.Controls.Add(Me.btnNextDay)
         Me.Controls.Add(Me.btnRandomizePrices)
@@ -383,5 +453,11 @@ Partial Class Form1
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnAddSlot As System.Windows.Forms.Button
+    Friend WithEvents txtAddMoney As System.Windows.Forms.TextBox
+    Friend WithEvents lblTestHoursLeft As System.Windows.Forms.Label
+    Friend WithEvents lblHoursLeft As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents btnWait1 As System.Windows.Forms.Button
+    Friend WithEvents btnWait6 As System.Windows.Forms.Button
 
 End Class
