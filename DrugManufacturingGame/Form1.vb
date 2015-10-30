@@ -64,6 +64,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -71,6 +72,9 @@
 =======
 >>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
 
+>>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
+=======
+        
 >>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
     End Sub
 
