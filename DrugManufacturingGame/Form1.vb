@@ -61,10 +61,6 @@
            CStr(FormatCurrency(city(currentCity).GetWhitePowderSellPrice() - city(currentCity).GetWhitePowderBuyPrice(), NumDigitsAfterDecimal:=0))
         lsvwCityPrices.Items.Add(WhitePowder)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 2445515... FUCK
     End Sub
 
     Private Sub updateCityUI()
