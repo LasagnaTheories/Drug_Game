@@ -8,3 +8,7 @@ C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\Dru
 C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.xml
 C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.pdb
 C:\Users\Aaron\Documents\Programming\Visual Basic 2012\DrugManufacturingGame\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.Form1.resources
+C:\Users\FieldRunner\Documents\Programming\Visual Basic\DrugManufacturingGame\Drug_Game\DrugManufacturingGame\bin\Debug\DrugManufacturingGame.exe.config
+C:\Users\FieldRunner\Documents\Programming\Visual Basic\DrugManufacturingGame\Drug_Game\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.exe
+C:\Users\FieldRunner\Documents\Programming\Visual Basic\DrugManufacturingGame\Drug_Game\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.xml
+C:\Users\FieldRunner\Documents\Programming\Visual Basic\DrugManufacturingGame\Drug_Game\DrugManufacturingGame\obj\Debug\DrugManufacturingGame.pdb
