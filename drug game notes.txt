@@ -1,3 +1,6 @@
+Implement save system
+Hour System? (certain actions take certain hours?)
+Implement bulk buying
 ===================================================================
 v Store system v (similar to shoppe keep) v
 ===================================================================
