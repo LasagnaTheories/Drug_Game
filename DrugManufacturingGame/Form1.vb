@@ -61,6 +61,21 @@
            CStr(FormatCurrency(city(currentCity).GetWhitePowderSellPrice() - city(currentCity).GetWhitePowderBuyPrice(), NumDigitsAfterDecimal:=0))
         lsvwCityPrices.Items.Add(WhitePowder)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
+=======
+>>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
+
+>>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
+=======
+        
+>>>>>>> parent of e647faa... Remove job class, changed interface controls to double click for buy and sell, added shit
     End Sub
 
     Private Sub updateCityUI()
