@@ -60,6 +60,7 @@ Partial Class Form1
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnWait1 = New System.Windows.Forms.Button()
         Me.btnWait6 = New System.Windows.Forms.Button()
+        Me.btnAddWeed = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAddMoney
@@ -282,7 +283,7 @@ Partial Class Form1
         Me.lsvwFloor.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3, Me.ColumnHeader6, Me.ColumnHeader5})
         Me.lsvwFloor.Location = New System.Drawing.Point(405, 115)
         Me.lsvwFloor.Name = "lsvwFloor"
-        Me.lsvwFloor.Size = New System.Drawing.Size(174, 196)
+        Me.lsvwFloor.Size = New System.Drawing.Size(190, 196)
         Me.lsvwFloor.TabIndex = 5
         Me.lsvwFloor.UseCompatibleStateImageBehavior = False
         Me.lsvwFloor.View = System.Windows.Forms.View.Details
@@ -309,7 +310,7 @@ Partial Class Form1
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(405, 94)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(174, 20)
+        Me.Label7.Size = New System.Drawing.Size(190, 20)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "The Floor"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.BottomRight
@@ -319,7 +320,7 @@ Partial Class Form1
         Me.btnAddSlot.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnAddSlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddSlot.ForeColor = System.Drawing.Color.White
-        Me.btnAddSlot.Location = New System.Drawing.Point(585, 221)
+        Me.btnAddSlot.Location = New System.Drawing.Point(615, 221)
         Me.btnAddSlot.Name = "btnAddSlot"
         Me.btnAddSlot.Size = New System.Drawing.Size(97, 23)
         Me.btnAddSlot.TabIndex = 0
@@ -365,7 +366,7 @@ Partial Class Form1
         Me.btnWait1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnWait1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnWait1.ForeColor = System.Drawing.Color.White
-        Me.btnWait1.Location = New System.Drawing.Point(585, 140)
+        Me.btnWait1.Location = New System.Drawing.Point(615, 140)
         Me.btnWait1.Name = "btnWait1"
         Me.btnWait1.Size = New System.Drawing.Size(97, 23)
         Me.btnWait1.TabIndex = 0
@@ -377,12 +378,24 @@ Partial Class Form1
         Me.btnWait6.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.btnWait6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnWait6.ForeColor = System.Drawing.Color.White
-        Me.btnWait6.Location = New System.Drawing.Point(585, 169)
+        Me.btnWait6.Location = New System.Drawing.Point(615, 169)
         Me.btnWait6.Name = "btnWait6"
         Me.btnWait6.Size = New System.Drawing.Size(97, 23)
         Me.btnWait6.TabIndex = 0
         Me.btnWait6.Text = "Wait 6h"
         Me.btnWait6.UseVisualStyleBackColor = False
+        '
+        'btnAddWeed
+        '
+        Me.btnAddWeed.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnAddWeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddWeed.ForeColor = System.Drawing.Color.White
+        Me.btnAddWeed.Location = New System.Drawing.Point(615, 250)
+        Me.btnAddWeed.Name = "btnAddWeed"
+        Me.btnAddWeed.Size = New System.Drawing.Size(97, 23)
+        Me.btnAddWeed.TabIndex = 0
+        Me.btnAddWeed.Text = "Add Weed"
+        Me.btnAddWeed.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -411,6 +424,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnRemoveMoney)
         Me.Controls.Add(Me.btnWait6)
         Me.Controls.Add(Me.btnWait1)
+        Me.Controls.Add(Me.btnAddWeed)
         Me.Controls.Add(Me.btnAddSlot)
         Me.Controls.Add(Me.btnNextDay)
         Me.Controls.Add(Me.btnRandomizePrices)
@@ -459,5 +473,6 @@ Partial Class Form1
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents btnWait1 As System.Windows.Forms.Button
     Friend WithEvents btnWait6 As System.Windows.Forms.Button
+    Friend WithEvents btnAddWeed As System.Windows.Forms.Button
 
 End Class

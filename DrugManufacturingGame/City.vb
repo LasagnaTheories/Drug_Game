@@ -6,6 +6,8 @@
     Dim CityName As String
     Dim WeedQty As Integer
     Dim WhitePowderQty As Integer
+    Dim WeedSellTime As Integer = 3
+    Dim WhitePowderSellTime As Integer = 6
 
     Sub New(ByVal s As String)
         CityName = s
@@ -59,5 +61,12 @@
         WhitePowderQty -= 1
     End Sub
 
+    Public Function GetWeedSellTime() As Integer
+        Return WeedSellTime
+    End Function
+
+    Public Function GetWhitePowderSellTime() As Integer
+        Return WhitePowderSellTime
+    End Function
 
 End Class

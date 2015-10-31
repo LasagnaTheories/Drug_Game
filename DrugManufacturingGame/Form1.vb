@@ -1,11 +1,17 @@
 ﻿Public Class Form1
-    'Testing commits from Visual Studio 2012
-    'Testing commits a second time
-    'Laptop commit test
 
     Public playerStats, Inventory As New Dictionary(Of String, Integer)
     Public currentCity, day, maxSlots, currentSlots, maxMoney, hoursLeft As Integer
     Public city As New List(Of City)
+    Public selling As New List(Of List(Of String))
+
+
+    Private Sub checkStats()
+        'check if stats already exist, otherwise create new stats
+        initializeStats()
+        initializeInventory()
+    End Sub
+
 
     Private Sub initializeInventory()
         Inventory.Add("Weed", 0)
@@ -13,15 +19,18 @@
         updateInventory()
     End Sub
 
+
     Private Sub initializeStats()
         currentCity = 0
         day = 1
         maxSlots = 16
         maxMoney = 10000
         hoursLeft = 24
+        currentSlots = maxSlots
         playerStats.Add("Money", 1000)
         playerStats.Add("CleanMoney", 0)
     End Sub
+
 
     Private Sub initializeCities()
         Dim city1 As New City("Kansasville")
@@ -29,6 +38,7 @@
         city.Add(city1)
         city.Add(city2)
     End Sub
+
 
     Private Sub initializeUI()
         tmrScreenUpdate.Enabled = True
@@ -54,21 +64,33 @@
         '---Add Floor slots---
         Dim Slots As New ListViewItem("(Free Slots)")
         Slots.ForeColor = Color.DimGray
-        Slots.SubItems.Add(maxSlots)
+        Slots.SubItems.Add(currentSlots)
+        Slots.SubItems.Add("(" + CStr(maxSlots) + ")")
         lsvwFloor.Items.Add(Slots)
 
     End Sub
+
 
     Private Sub updateSlots()
         lsvwFloor.Items.Clear()
 
         Dim Slots As New ListViewItem("(Free Slots)")
         Slots.ForeColor = Color.DimGray
-        Slots.SubItems.Add(maxSlots)
+        Slots.SubItems.Add(currentSlots)
+        Slots.SubItems.Add("(" + CStr(maxSlots) + ")")
         lsvwFloor.Items.Add(Slots)
 
+        If selling.Count > 0 Then
+            For i As Integer = 0 To (selling.Count - 1)
+                Dim drug As New ListViewItem(CStr(selling(i)(0)))
+                drug.SubItems.Add(selling(i)(1)) ' price
+                drug.SubItems.Add(CStr(selling(i)(2)) + "h") ' time remaining
+                lsvwFloor.Items.Add(drug)
+            Next
+        End If
 
     End Sub
+
 
     Private Sub updateCityUI()
         lsvwCityPrices.Items.Clear()
@@ -89,7 +111,6 @@
     End Sub
 
 
-
     Private Sub updateInventory()
         lsvwInventory.Items.Clear()
 
@@ -102,11 +123,6 @@
         lsvwInventory.Items.Add(WhitePowder)
     End Sub
 
-    Private Sub checkStats()
-        'check if stats already exist, otherwise create new stats
-        initializeStats()
-        initializeInventory()
-    End Sub
 
     Private Sub wait(ByVal hr As Integer)
         hoursLeft -= hr
@@ -119,6 +135,31 @@
             day += 1
             Randomize()
         End If
+
+        If selling.Count > 0 Then               'take away hour input from drug selling time and check
+            For i As Integer = selling.Count - 1 To 0 Step -1 ' if that time ready to be sold
+                Dim timeLeft As Integer = selling(i)(2)
+                If hr >= timeLeft Then
+                    If selling(i)(0) = "Weed" Then
+                        playerStats("Money") += city(currentCity).GetWeedSellPrice()
+                        If playerStats("Money") >= maxMoney Then
+                            playerStats("Money") = maxMoney
+                        End If
+                    ElseIf selling(i)(0) = "White Powder" Then
+                        playerStats("Money") += city(currentCity).GetWhitePowderSellPrice()
+                        If playerStats("Money") >= maxMoney Then
+                            playerStats("Money") = maxMoney
+                        End If
+                    End If
+                    selling.RemoveAt(i)
+                    currentSlots += 1
+                Else
+                    selling(i)(2) -= hr
+                End If
+            Next
+            updateSlots()
+        End If
+        ' Check if drugs are done selling here
     End Sub
     '================================================================================================================
     '=============================================Screen/UI Update Timers============================================
@@ -152,9 +193,8 @@
         Me.Controls.Add(lblMaxMoney)
         Me.Controls.Add(lblSHours)
         Me.Controls.Add(lblHoursLeft)
-
-
     End Sub
+
 
     Private Sub tmrUIRefresh_Tick(sender As Object, e As EventArgs) Handles tmrUIRefresh.Tick
         lblCity.Text = city(currentCity).GetCityName()
@@ -168,6 +208,7 @@
         checkStats()
         initializeUI()
     End Sub
+
     '================================================================================================================
     '==================================================Cheat Buttons=================================================
     '================================================================================================================
@@ -177,9 +218,11 @@
         updateCityUI()
     End Sub
 
+
     Private Sub btnAddCleanMoney_Click(sender As Object, e As EventArgs) Handles btnAddCleanMoney.Click
         playerStats("CleanMoney") += 100
     End Sub
+
 
     Private Sub btnAddMoney_Click(sender As Object, e As EventArgs) Handles btnAddMoney.Click
         If txtAddMoney.Text.Trim.Length > 0 Then
@@ -187,7 +230,6 @@
         Else
             playerStats("Money") += 100
         End If
-
     End Sub
 
 
@@ -249,26 +291,30 @@
     End Sub
 
 
-
     Private Sub lsvwInventory_DoubleClick(sender As Object, e As EventArgs) Handles lsvwInventory.DoubleClick, lsvwFloor.DoubleClick
         If lsvwInventory.FocusedItem.Index = 0 Then         'if focus is weed
-            If Inventory("Weed") > 0 Then
+            If Inventory("Weed") > 0 And currentSlots > 0 Then
+                Dim drug As New List(Of String)
+                drug.Add("Weed")
+                drug.Add(CStr(city(currentCity).GetWeedSellPrice))
+                drug.Add(CStr(city(currentCity).GetWeedSellTime))
+                selling.Add(drug)
                 Inventory("Weed") -= 1
-                playerStats("Money") += city(currentCity).GetWeedSellPrice()
-
-                If playerStats("Money") >= maxMoney Then
-                    playerStats("Money") = maxMoney
-                End If
+                currentSlots -= 1
+                updateSlots()
                 updateInventory()
             End If
-        ElseIf lsvwInventory.FocusedItem.Index = 1 Then     'if focus is white powder
-            If Inventory("White Powder") > 0 Then
-                Inventory("White Powder") -= 1
-                playerStats("Money") += city(currentCity).GetWhitePowderSellPrice()
 
-                If playerStats("Money") >= maxMoney Then
-                    playerStats("Money") = maxMoney
-                End If
+        ElseIf lsvwInventory.FocusedItem.Index = 1 Then  
+            If Inventory("White Powder") > 0 And currentSlots > 0 Then
+                Dim drug As New List(Of String)
+                drug.Add("White Powder")
+                drug.Add(CStr(city(currentCity).GetWhitePowderSellPrice))
+                drug.Add(CStr(city(currentCity).GetWhitePowderSellTime))
+                selling.Add(drug)
+                Inventory("White Powder") -= 1
+                currentSlots -= 1
+                updateSlots()
                 updateInventory()
             End If
         End If
@@ -280,13 +326,26 @@
         updateSlots()
     End Sub
 
+
     Private Sub btnWait1_Click(sender As Object, e As EventArgs) Handles btnWait1.Click
         wait(1)
     End Sub
+
 
     Private Sub btnWait6_Click(sender As Object, e As EventArgs) Handles btnWait6.Click
         wait(6)
     End Sub
 
+    Private Sub btnAddWeed_Click(sender As Object, e As EventArgs) Handles btnAddWeed.Click
+        If currentSlots > 0 Then
+            Dim drug As New List(Of String)
+            drug.Add("Weed")
+            drug.Add(CStr(city(currentCity).GetWeedSellPrice))
+            drug.Add(CStr(city(currentCity).GetWeedSellTime))
+            selling.Add(drug)
+            currentSlots -= 1
+            updateSlots()
+        End If
+    End Sub
 End Class
 
